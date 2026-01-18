@@ -1,0 +1,30 @@
+.topBar{
+    margin: 16px 0px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search{
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search input{
+    flex:1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+}
+
+/* keep the search icon a fixed small size */
+.search img {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,52 @@
+/* import Image from "../image/image";
+import { format } from "timeago.js";
+const Comment = ({ comment }) => {
+  return (
+    <div className="comment">
+      <Image
+        src={comment?.user?.img || "/general/noAvatar.png"}
+        alt=""
+      />
+      <div className="commentContent">
+        <span className="commentUsername">
+          {comment?.user?.displayName}
+        </span>
+        <p className="commentText">
+          {comment?.description}
+        </p>
+        <span className="commentTime">
+          {format(comment?.createdAt)}
+        </span>
+      </div>
+    </div>
+  );
+};
+export default Comment; */
+
+import Image from "../image/image";
+import { getImageProps } from "../../utils/getImageProps";
+import {format} from "timeago.js" 
+
+const Comment = ({ comment }) => {
+  return (
+    <div className="comment">
+  <Image {...getImageProps(comment.user.img || "/general/noAvatar.png")} alt="" />
+      <div className="commentContent">
+        <span className="commentUsername">{comment.user.displayName}</span>
+        <p className="commentText">
+          {comment.description}
+        </p>
+        <span className="commentTime">{format(comment.createdAt)}</span>
+      </div>
+    </div>
+  );
+};
+
+export default Comment;
+
+
+
+
+
+
+
